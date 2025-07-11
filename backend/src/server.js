@@ -26,7 +26,8 @@ async function startServer() {
     // Middleware
     app.use(
       cors({
-        origin: "http://localhost:3000",
+        // origin: "http://localhost:3000", // Uncomment this in Development
+        origin: "https://nasa-bsma.vercel.app", // Production URL
       })
     );
     app.use(morgan("combined"));
