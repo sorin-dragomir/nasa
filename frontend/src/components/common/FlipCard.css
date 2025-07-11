@@ -1,0 +1,520 @@
+.flip-card {
+  background: transparent;
+  width: 100%;
+  max-width: 200px;
+  height: 150px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  margin: 0 auto;
+}
+
+.flip-card:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.1);
+}
+
+.flip-card.small {
+  max-width: 180px;
+  height: 130px;
+}
+
+.flip-card.large {
+  max-width: 240px;
+  height: 180px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #000c, #001122);
+  border: 1px solid #00ffff33;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Enhanced hover effects for the card faces */
+.flip-card:hover .flip-card-front,
+.flip-card:hover .flip-card-back {
+  border-color: #00ffff66;
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
+}
+
+.flip-card.small .flip-card-front,
+.flip-card.small .flip-card-back {
+  padding: 15px;
+}
+
+.flip-card.large .flip-card-front,
+.flip-card.large .flip-card-back {
+  padding: 25px;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(145deg, #001122, #000c);
+}
+
+/* Color variants */
+.flip-card.cyan .flip-card-front {
+  border-color: #00ffff44;
+  background: linear-gradient(145deg, #000c, #001a1a);
+}
+
+.flip-card.cyan .flip-card-back {
+  border-color: #00ffff66;
+  background: linear-gradient(145deg, #001a1a, #000c);
+}
+
+.flip-card.orange .flip-card-front {
+  border-color: #ff950044;
+  background: linear-gradient(145deg, #000c, #1a1000);
+}
+
+.flip-card.orange .flip-card-back {
+  border-color: #ff950066;
+  background: linear-gradient(145deg, #1a1000, #000c);
+}
+
+.flip-card.green .flip-card-front {
+  border-color: #00ff0044;
+  background: linear-gradient(145deg, #000c, #001a00);
+}
+
+.flip-card.green .flip-card-back {
+  border-color: #00ff0066;
+  background: linear-gradient(145deg, #001a00, #000c);
+}
+
+.flip-card.red .flip-card-front {
+  border-color: #ff444444;
+  background: linear-gradient(145deg, #000c, #1a0000);
+}
+
+.flip-card.red .flip-card-back {
+  border-color: #ff444466;
+  background: linear-gradient(145deg, #1a0000, #000c);
+}
+
+.flip-card.purple .flip-card-front {
+  border-color: #9b59b644;
+  background: linear-gradient(145deg, #000c, #1a001a);
+}
+
+.flip-card.purple .flip-card-back {
+  border-color: #9b59b666;
+  background: linear-gradient(145deg, #1a001a, #000c);
+}
+
+/* Card Icon */
+.flip-card .card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #00ffff22;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.flip-card.small .card-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.flip-card.large .card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.flip-card .card-icon i {
+  font-size: 24px;
+  color: #00ffff;
+}
+
+.flip-card.small .card-icon i {
+  font-size: 20px;
+}
+
+.flip-card.large .card-icon i {
+  font-size: 28px;
+}
+
+/* Color-specific icon styles */
+.flip-card.cyan .card-icon {
+  background: #00ffff22;
+}
+.flip-card.cyan .card-icon i {
+  color: #00ffff;
+}
+
+.flip-card.orange .card-icon {
+  background: #ff950022;
+}
+.flip-card.orange .card-icon i {
+  color: #ff9500;
+}
+
+.flip-card.green .card-icon {
+  background: #00ff0022;
+}
+.flip-card.green .card-icon i {
+  color: #00ff00;
+}
+
+.flip-card.red .card-icon {
+  background: #ff444422;
+}
+.flip-card.red .card-icon i {
+  color: #ff4444;
+}
+
+.flip-card.purple .card-icon {
+  background: #9b59b622;
+}
+.flip-card.purple .card-icon i {
+  color: #9b59b6;
+}
+
+/* Card Content */
+.flip-card .card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card .card-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 8px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.flip-card.small .card-value {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.flip-card.large .card-value {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.flip-card .card-title {
+  font-size: 14px;
+  color: #00ffff;
+  margin-bottom: 4px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.flip-card.small .card-title {
+  font-size: 12px;
+}
+
+.flip-card.large .card-title {
+  font-size: 16px;
+}
+
+.flip-card .card-subtitle {
+  font-size: 12px;
+  color: #ffffff88;
+  text-align: center;
+  font-weight: 300;
+}
+
+.flip-card.small .card-subtitle {
+  font-size: 10px;
+}
+
+.flip-card.large .card-subtitle {
+  font-size: 14px;
+}
+
+/* Flip Indicator */
+.flip-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0.4;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.flip-card:hover .flip-indicator {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.flip-indicator i {
+  font-size: 16px;
+  color: #00ffff;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+/* Pulse animation for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .flip-indicator {
+    animation: pulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+/* Color-specific text colors */
+.flip-card.orange .card-title {
+  color: #ff9500;
+}
+
+.flip-card.green .card-title {
+  color: #00ff00;
+}
+
+.flip-card.red .card-title {
+  color: #ff4444;
+}
+
+.flip-card.purple .card-title {
+  color: #9b59b6;
+}
+
+/* Animations */
+@keyframes hover-glow {
+  0% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.flip-card:hover .flip-card-front,
+.flip-card:hover .flip-card-back {
+  animation: hover-glow 2s ease-in-out infinite;
+}
+
+/* Faster flip on hover */
+@media (hover: hover) and (pointer: fine) {
+  .flip-card-inner {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+/* Touch device specific styles */
+@media (hover: none) and (pointer: coarse) {
+  .flip-card {
+    cursor: default;
+  }
+
+  .flip-card-inner {
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flip-card {
+    width: 100%;
+    max-width: none;
+    height: 160px; /* Increased from 120px */
+  }
+
+  .flip-card.small {
+    width: 100%;
+    max-width: none;
+    height: 150px; /* Increased from 110px */
+  }
+
+  .flip-card.large {
+    width: 100%;
+    max-width: none;
+    height: 170px; /* Increased from 130px */
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    padding: 12px; /* Reduced padding for mobile */
+  }
+
+  .flip-card.small .flip-card-front,
+  .flip-card.small .flip-card-back {
+    padding: 10px; /* Reduced padding for small cards */
+  }
+
+  .flip-card.large .flip-card-front,
+  .flip-card.large .flip-card-back {
+    padding: 15px; /* Reduced padding for large cards */
+  }
+
+  .flip-card .card-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 6px; /* Optimized margin */
+  }
+
+  .flip-card .card-icon i {
+    font-size: 18px;
+  }
+
+  .flip-card .card-value {
+    font-size: 20px;
+    margin-bottom: 4px; /* Reduced margin */
+  }
+
+  .flip-card .card-title {
+    font-size: 12px;
+    margin-bottom: 2px; /* Reduced margin */
+  }
+
+  .flip-card .card-subtitle {
+    font-size: 10px;
+    line-height: 1.2; /* Better line spacing */
+    margin-top: 2px;
+  }
+
+  .flip-indicator {
+    top: 5px;
+    right: 5px;
+  }
+
+  .flip-indicator i {
+    font-size: 14px; /* Smaller indicator on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .flip-card {
+    width: 100%;
+    max-width: none;
+    height: 140px; /* Increased from 100px */
+  }
+
+  .flip-card.small {
+    width: 100%;
+    max-width: none;
+    height: 130px; /* Increased from 95px */
+  }
+
+  .flip-card.large {
+    width: 100%;
+    max-width: none;
+    height: 150px; /* Increased from 105px */
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    padding: 8px; /* Reduced padding for very small screens */
+  }
+
+  .flip-card.small .flip-card-front,
+  .flip-card.small .flip-card-back {
+    padding: 6px; /* Reduced padding for small cards on very small screens */
+  }
+
+  .flip-card.large .flip-card-front,
+  .flip-card.large .flip-card-back {
+    padding: 10px; /* Reduced padding for large cards on very small screens */
+  }
+
+  .flip-card .card-value {
+    font-size: 16px;
+    margin-bottom: 3px; /* Reduced margin */
+  }
+
+  .flip-card .card-title {
+    font-size: 10px;
+    line-height: 1.1;
+    margin-bottom: 1px; /* Reduced margin */
+  }
+
+  .flip-card .card-subtitle {
+    font-size: 8px;
+    line-height: 1.1; /* Better line spacing */
+    margin-top: 1px;
+  }
+
+  .flip-card .card-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 6px; /* Reduced margin */
+  }
+
+  .flip-card .card-icon i {
+    font-size: 16px;
+  }
+
+  .flip-indicator {
+    top: 3px;
+    right: 3px;
+  }
+
+  .flip-indicator i {
+    font-size: 12px; /* Even smaller indicator on very small screens */
+  }
+}
+
+/* Bootstrap Grid Integration - Force 2 cards per row on mobile */
+@media (max-width: 767.98px) {
+  .col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  
+  .col-lg-3.col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  
+  .col-lg-3.col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}

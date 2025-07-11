@@ -1,0 +1,410 @@
+.iss-container {
+  padding: 20px 0;
+}
+
+.iss-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.iss-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 28px;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.iss-title i {
+  font-size: 32px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.iss-description {
+  font-size: 16px;
+  color: #00ffff;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.iss-main-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.iss-location-card {
+  background: #000c;
+  border: 1px solid #3498db33;
+  border-radius: 8px;
+  padding: 25px;
+  color: #00ffff;
+}
+
+.location-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.location-header i {
+  color: #3498db;
+  font-size: 24px;
+}
+
+.location-header h2 {
+  margin: 0;
+  flex: 1;
+  color: #00ffff;
+}
+
+.live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #00ff00;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: #00ff00;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.coordinates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.coordinate-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.coordinate-label {
+  font-size: 12px;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.coordinate-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.location-details .region {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+
+.location-details .timestamp {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.iss-visual {
+  background: #000c;
+  border: 1px solid #3498db33;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+
+.earth-representation {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to bottom, #1e3c72, #2a5298, #1e3c72);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #3498db;
+}
+
+.earth-representation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 60% 70%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px, 30px 30px, 40px 40px;
+}
+
+.iss-marker {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #00ff00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: orbit 2s ease-in-out infinite;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px #00ff00;
+}
+
+.iss-marker i {
+  color: #000;
+  font-size: 18px;
+}
+
+@keyframes orbit {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+.iss-stats {
+  margin-bottom: 40px;
+}
+
+.crew-section {
+  margin-bottom: 40px;
+}
+
+.crew-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #00ffff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.crew-title i {
+  color: #3498db;
+}
+
+.crew-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.crew-card {
+  background: #000c;
+  border: 1px solid #3498db33;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #00ffff;
+  transition: all 0.3s ease;
+}
+
+.crew-card:hover {
+  border-color: #3498db;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+}
+
+.crew-info {
+  flex: 1;
+}
+
+.crew-name {
+  margin: 0 0 5px 0;
+  color: #00ffff;
+  font-size: 16px;
+}
+
+.crew-craft {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.crew-avatar {
+  width: 50px;
+  height: 50px;
+  background: #3498db22;
+  border: 2px solid #3498db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crew-avatar i {
+  color: #3498db;
+  font-size: 24px;
+}
+
+.iss-facts {
+  margin-top: 40px;
+}
+
+.facts-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #00ffff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.facts-title i {
+  color: #3498db;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.fact-card {
+  background: #000c;
+  border: 1px solid #3498db33;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  color: #00ffff;
+  transition: all 0.3s ease;
+}
+
+.fact-card:hover {
+  border-color: #3498db;
+  transform: translateY(-2px);
+}
+
+.fact-card i {
+  color: #3498db;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.fact-card h4 {
+  margin: 0 0 8px 0;
+  color: #00ffff;
+  font-size: 14px;
+}
+
+.fact-card p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ff444422;
+  border: 1px solid #ff4444;
+  color: #ff4444;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .iss-main-info {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .coordinates {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .iss-container {
+    padding: 15px 0;
+  }
+
+  .iss-title {
+    font-size: 24px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .crew-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .facts-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .iss-location-card {
+    padding: 20px;
+  }
+
+  .earth-representation {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .iss-location-card {
+    padding: 15px;
+  }
+
+  .coordinate-value {
+    font-size: 16px;
+  }
+
+  .earth-representation {
+    height: 200px;
+  }
+
+  .iss-marker {
+    width: 25px;
+    height: 25px;
+  }
+
+  .iss-marker i {
+    font-size: 16px;
+  }
+
+  .facts-grid {
+    grid-template-columns: 1fr;
+  }
+}

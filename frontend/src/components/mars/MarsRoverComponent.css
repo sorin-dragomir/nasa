@@ -1,0 +1,275 @@
+.mars-rover-container {
+  padding: 20px 0;
+}
+
+.mars-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mars-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 28px;
+  color: #ff6b35;
+  margin-bottom: 15px;
+}
+
+.mars-title i {
+  font-size: 32px;
+  color: #ff6b35;
+}
+
+.mars-description {
+  font-size: 16px;
+  color: #00ffff;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.rover-stats {
+  margin-bottom: 40px;
+}
+
+.rover-controls {
+  background: #000c;
+  border: 1px solid #00ffff33;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.rover-selector {
+  margin-bottom: 30px;
+}
+
+.rover-selector label {
+  display: block;
+  color: #00ffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.rover-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.rover-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border: 1px solid #00ffff33;
+  color: #00ffff;
+  padding: 15px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.rover-btn:hover {
+  border-color: #ff6b35;
+  background: #ff6b3511;
+}
+
+.rover-btn.active {
+  border-color: #ff6b35;
+  background: #ff6b3522;
+  color: #ff6b35;
+}
+
+.rover-btn.inactive {
+  opacity: 0.6;
+}
+
+.rover-btn.inactive:hover {
+  border-color: #00ffff66;
+  background: #00ffff11;
+}
+
+.rover-name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.rover-status {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.camera-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 20px;
+  align-items: end;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control-group label {
+  color: #00ffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.control-select,
+.control-input {
+  background: #000;
+  border: 1px solid #00ffff33;
+  color: #00ffff;
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.control-select:focus,
+.control-input:focus {
+  outline: none;
+  border-color: #ff6b35;
+}
+
+.control-input::placeholder {
+  color: #00ffff66;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ff6b35;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  height: fit-content;
+}
+
+.search-btn:hover {
+  background: #ff8c61;
+}
+
+.search-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.no-photos {
+  text-align: center;
+  padding: 60px 20px;
+  color: #00ffff;
+}
+
+.no-photos i {
+  font-size: 64px;
+  opacity: 0.3;
+  margin-bottom: 20px;
+  color: #ff6b35;
+}
+
+.no-photos h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #ff6b35;
+}
+
+.no-photos p {
+  margin: 0;
+  opacity: 0.7;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ff444422;
+  border: 1px solid #ff4444;
+  color: #ff4444;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .camera-controls {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .rover-options {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .mars-rover-container {
+    padding: 15px 0;
+  }
+
+  .mars-title {
+    font-size: 24px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .rover-controls {
+    padding: 20px;
+  }
+
+  .rover-options {
+    grid-template-columns: 1fr;
+  }
+
+  .rover-btn {
+    padding: 12px;
+  }
+
+  .control-group {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rover-controls {
+    padding: 15px;
+  }
+
+  .rover-selector {
+    margin-bottom: 20px;
+  }
+
+  .rover-btn {
+    padding: 10px;
+  }
+
+  .rover-name {
+    font-size: 14px;
+  }
+
+  .rover-status {
+    font-size: 11px;
+  }
+
+  .search-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}

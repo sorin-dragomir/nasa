@@ -1,0 +1,490 @@
+/* Bootstrap overrides and NASA-themed customizations */
+
+/* Dark theme customizations */
+.bg-dark {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.border-info {
+  border-color: rgba(0, 255, 255, 0.3) !important;
+}
+
+/* Button customizations */
+.btn-info {
+  background-color: #00ffff;
+  border-color: #00ffff;
+  color: #000;
+}
+
+.btn-info:hover,
+.btn-info:focus {
+  background-color: #00cccc;
+  border-color: #00cccc;
+  color: #000;
+}
+
+.btn-outline-info {
+  border-color: #00ffff;
+  color: #00ffff;
+}
+
+.btn-outline-info:hover,
+.btn-outline-info:focus {
+  background-color: rgba(0, 255, 255, 0.1);
+  border-color: #00ffff;
+  color: #00ffff;
+}
+
+/* Form controls */
+.form-control:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 255, 255, 0.25);
+}
+
+/* Text colors */
+.text-info {
+  color: #00ffff !important;
+}
+
+/* Card customizations */
+.card.bg-dark {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  color: #00ffff;
+}
+
+/* Alert customizations */
+.alert-info {
+  background-color: rgba(0, 255, 255, 0.1);
+  border-color: rgba(0, 255, 255, 0.3);
+  color: #00ffff;
+}
+
+/* Table customizations */
+.table-dark {
+  --bs-table-bg: rgba(0, 0, 0, 0.9);
+  --bs-table-border-color: rgba(0, 255, 255, 0.3);
+  color: #00ffff;
+}
+
+.table-info {
+  --bs-table-bg: rgba(0, 255, 255, 0.9);
+  --bs-table-border-color: #00ffff;
+}
+
+/* Header responsive adjustments */
+@media (max-width: 480px) {
+  .banner-text {
+    font-size: 1.2rem;
+  }
+
+  .header-nav .nav-link span {
+    display: none !important;
+  }
+}
+
+/* Button group mobile fixes */
+@media (max-width: 576px) {
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-group .btn {
+    border-radius: 0.375rem !important;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Material Icons alignment */
+.material-icons {
+  vertical-align: middle;
+}
+
+.me-2 .material-icons {
+  margin-right: 0.5rem !important;
+}
+
+/* Mars Rover Component Customizations */
+.mars-rover-container .mars-title {
+  color: #dc3545 !important;
+}
+
+.mars-rover-container .btn-danger {
+  background: linear-gradient(135deg, #dc3545, #a71e2e);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.mars-rover-container .btn-danger:hover {
+  background: linear-gradient(135deg, #a71e2e, #dc3545);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.mars-rover-container .btn-outline-danger {
+  border-color: #dc3545;
+  color: #dc3545;
+  background: transparent;
+}
+
+.mars-rover-container .btn-outline-danger:hover {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.mars-rover-container .form-control,
+.mars-rover-container .form-select {
+  border-color: #6c757d;
+}
+
+.mars-rover-container .form-control:focus,
+.mars-rover-container .form-select:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Near Earth Objects Component Customizations */
+.neo-container .neo-title {
+  color: #ffc107 !important;
+}
+
+.neo-container .card.bg-dark.border-warning {
+  background: rgba(33, 37, 41, 0.9) !important;
+  border-color: #ffc107 !important;
+}
+
+.neo-container .card-header.bg-warning {
+  background: linear-gradient(135deg, #ffc107, #e0a800) !important;
+  color: #212529 !important;
+}
+
+.neo-container .asteroid-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.neo-container .asteroid-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.2);
+}
+
+.neo-container .card.bg-secondary {
+  background: rgba(108, 117, 125, 0.1) !important;
+  border: 1px solid rgba(108, 117, 125, 0.3);
+}
+
+.neo-container .card.bg-secondary:hover {
+  background: rgba(108, 117, 125, 0.2) !important;
+}
+
+.neo-container .badge.bg-danger {
+  background: linear-gradient(135deg, #dc3545, #a71e2e) !important;
+}
+
+.neo-container .badge.bg-warning {
+  background: linear-gradient(135deg, #ffc107, #e0a800) !important;
+}
+
+.neo-container .badge.bg-success {
+  background: linear-gradient(135deg, #28a745, #1e7e34) !important;
+}
+
+.neo-container .alert.alert-danger {
+  background: rgba(220, 53, 69, 0.1) !important;
+  border-color: #dc3545 !important;
+  color: #dc3545 !important;
+}
+
+/* Mars Rover Mobile Responsive Improvements */
+@media (max-width: 768px) {
+  .mars-rover-container .btn-group button {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .mars-rover-container .btn-group button div {
+    text-align: center;
+  }
+
+  .mars-rover-container .btn-group button small {
+    font-size: 0.75rem;
+  }
+}
+
+/* Near Earth Objects Mobile Responsive Improvements */
+@media (max-width: 768px) {
+  .neo-container .asteroid-card .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .neo-container .asteroid-card .badge {
+    align-self: flex-end;
+  }
+}
+
+/* Common animations for both components */
+.mars-rover-container .card,
+.neo-container .card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.mars-rover-container .flip-card,
+.neo-container .flip-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects for interactive elements */
+.mars-rover-container .card:hover,
+.neo-container .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Loading state improvements */
+.mars-rover-container .btn:disabled,
+.neo-container .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ISS Tracker Component Customizations */
+.iss-container .card-text {
+  color: #17a2b8 !important;
+}
+
+.iss-container .text-muted {
+  color: #adb5bd !important;
+}
+
+.iss-container .bg-dark {
+  background-color: rgba(33, 37, 41, 0.95) !important;
+}
+
+.iss-container .card.bg-dark {
+  border: 1px solid #17a2b8;
+}
+
+.iss-container .card-header.bg-info {
+  background: linear-gradient(135deg, #17a2b8, #138496) !important;
+}
+
+/* Ensure all fact values are visible */
+.iss-container .text-center p {
+  color: #17a2b8 !important;
+  font-weight: 600 !important;
+}
+
+.iss-container .text-center h5 {
+  color: #ffffff !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* People in space cards */
+.iss-container .card.bg-secondary {
+  background: rgba(108, 117, 125, 0.2) !important;
+  border: 1px solid rgba(23, 162, 184, 0.3) !important;
+}
+
+/* Global text color improvements for dark backgrounds */
+.bg-dark .text-muted,
+.card.bg-dark .text-muted,
+.card.bg-secondary .text-muted {
+  color: #adb5bd !important;
+}
+
+/* Ensure small text is visible on dark backgrounds */
+.bg-dark .text-muted.small,
+.card.bg-dark .text-muted.small,
+.card.bg-secondary .text-muted.small {
+  color: #6c757d !important;
+}
+
+/* Improve visibility for asteroid card labels */
+.neo-container .text-muted.small {
+  color: #adb5bd !important;
+}
+
+/* Mars rover component text improvements */
+.mars-rover-container .text-muted {
+  color: #adb5bd !important;
+}
+
+/* General improvements for better contrast */
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* On dark backgrounds, use lighter muted text */
+.bg-dark .text-muted,
+.bg-secondary .text-muted {
+  color: #adb5bd !important;
+}
+
+/* Global cursor improvements for interactive elements */
+
+/* Links and navigation */
+a,
+.nav-link,
+.navbar-brand,
+.btn,
+button {
+  cursor: pointer !important;
+}
+
+/* Flip cards and interactive cards */
+.flip-card,
+.flip-card-container,
+.card[onclick],
+.card[style*="cursor"],
+.asteroid-card,
+.rover-btn,
+.rover-card,
+.launch-item,
+.clickable {
+  cursor: pointer !important;
+}
+
+/* Form controls and interactive elements */
+select,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.form-control:focus,
+.form-select:focus,
+.btn-check + label,
+.search-btn,
+.toggle-advanced,
+.clear-filters,
+.advanced-search-btn {
+  cursor: pointer !important;
+}
+
+/* Table rows and interactive table elements */
+.table tbody tr:hover,
+.launch-table-row,
+.clickable-row {
+  cursor: pointer !important;
+}
+
+/* Material icons when clickable */
+.material-icons.clickable,
+.clickable .material-icons,
+button .material-icons,
+.btn .material-icons {
+  cursor: pointer !important;
+}
+
+/* Specific component interactive elements */
+.mars-rover-container .rover-btn,
+.mars-rover-container .search-btn,
+.neo-container .asteroid-card,
+.iss-container .card,
+.apod-container .btn,
+.apod-container .btn-group button {
+  cursor: pointer !important;
+}
+
+/* Search filter components */
+.search-filter button,
+.search-filter .btn,
+.search-filter .toggle-advanced,
+.search-filter .clear-filters,
+.search-filter .search-btn {
+  cursor: pointer !important;
+}
+
+/* Badge and tag elements that might be clickable */
+.badge.clickable,
+.filter-tag button,
+.remove-filter {
+  cursor: pointer !important;
+}
+
+/* Dropdown and accordion toggles */
+.dropdown-toggle,
+.accordion-button,
+.collapse-toggle {
+  cursor: pointer !important;
+}
+
+/* Any element with click handlers */
+[onclick],
+[data-bs-toggle],
+[data-bs-target],
+.clickable,
+.interactive {
+  cursor: pointer !important;
+}
+
+/* Hover states for better user feedback */
+.flip-card:hover,
+.card:hover,
+.btn:hover,
+a:hover,
+.asteroid-card:hover,
+.rover-btn:hover {
+  cursor: pointer !important;
+  transition: transform 0.2s ease;
+}
+
+/* Remove default cursor from disabled elements */
+.btn:disabled,
+button:disabled,
+.disabled {
+  cursor: not-allowed !important;
+}
+
+/* Loading states */
+.loading,
+.spinner-border {
+  cursor: wait !important;
+}
+
+/* Bootstrap grid mobile fixes - ensure 2 cards per row on mobile */
+@media (max-width: 767.98px) {
+  .col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  
+  .col-lg-3.col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  
+  .col-xl-3.col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  
+  .col-lg-3.col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  
+  .col-xl-3.col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+}

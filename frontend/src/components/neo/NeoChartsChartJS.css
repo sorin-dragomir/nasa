@@ -1,0 +1,118 @@
+.neo-charts-chartjs-container {
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.neo-charts-chartjs-container .charts-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(145deg, #001a00, #000c00);
+  border: 1px solid #00ff0033;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.neo-charts-chartjs-container .charts-title {
+  color: #00ff00;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.neo-charts-chartjs-container .charts-description {
+  color: #ffffff88;
+  font-size: 1rem;
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.neo-charts-chartjs-container .charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.neo-charts-chartjs-container .chart-card {
+  background: linear-gradient(145deg, #001a00, #000c00);
+  border: 1px solid #00ff0033;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.neo-charts-chartjs-container .chart-card:hover {
+  border-color: #00ff0066;
+  box-shadow: 0 8px 25px rgba(0, 255, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.neo-charts-chartjs-container .chart-card-wide {
+  grid-column: 1 / -1;
+}
+
+.neo-charts-chartjs-container .chart-header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.neo-charts-chartjs-container .chart-header h3 {
+  color: #00ff00;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.neo-charts-chartjs-container .chart-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.neo-charts-chartjs-container .charts-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: #ffffff88;
+  text-align: center;
+}
+
+.neo-charts-chartjs-container .charts-loading i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #00ff00;
+}
+
+.neo-charts-chartjs-container .charts-loading p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .neo-charts-chartjs-container .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .neo-charts-chartjs-container .chart-card {
+    padding: 1rem;
+  }
+  
+  .neo-charts-chartjs-container .chart-container {
+    height: 250px;
+  }
+}

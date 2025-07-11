@@ -1,0 +1,141 @@
+.neo-charts-d3-container {
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.neo-charts-d3-container .charts-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(145deg, #1a001a, #0c000c);
+  border: 1px solid #9b59b633;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.neo-charts-d3-container .charts-title {
+  color: #9b59b6;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.neo-charts-d3-container .charts-description {
+  color: #ffffff88;
+  font-size: 1rem;
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.neo-charts-d3-container .charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.neo-charts-d3-container .chart-card {
+  background: linear-gradient(145deg, #1a001a, #0c000c);
+  border: 1px solid #9b59b633;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.neo-charts-d3-container .chart-card:hover {
+  border-color: #9b59b666;
+  box-shadow: 0 8px 25px rgba(155, 89, 182, 0.2);
+  transform: translateY(-2px);
+}
+
+.neo-charts-d3-container .chart-header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.neo-charts-d3-container .chart-header h3 {
+  color: #9b59b6;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.neo-charts-d3-container .chart-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.neo-charts-d3-container .charts-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: #ffffff88;
+  text-align: center;
+}
+
+.neo-charts-d3-container .charts-loading i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #9b59b6;
+}
+
+.neo-charts-d3-container .charts-loading p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* D3 specific styles */
+.d3-tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #9b59b6;
+  border-radius: 8px;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.4;
+  pointer-events: none;
+  box-shadow: 0 4px 15px rgba(155, 89, 182, 0.3);
+  z-index: 1000;
+}
+
+/* Axis styling */
+.neo-charts-d3-container .chart-container svg text {
+  fill: #9b59b6;
+  font-size: 12px;
+}
+
+.neo-charts-d3-container .chart-container svg .domain {
+  stroke: #9b59b6;
+}
+
+.neo-charts-d3-container .chart-container svg .tick line {
+  stroke: #9b59b6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .neo-charts-d3-container .charts-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .neo-charts-d3-container .chart-card {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,311 @@
+.header {
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 4px rgba(0, 255, 255, 0.3);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  line-height: 60px;
+  gap: 20px;
+}
+
+.header-logo {
+  height: 40px;
+  width: auto;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.logo-text {
+  color: #00ffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.banner-text {
+  color: #00ffff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Force header navigation to stay on one line - override all other styles */
+.header .header-nav,
+nav.header-nav {
+  display: flex !important;
+  gap: 8px;
+  margin-left: auto;
+  flex-wrap: nowrap !important;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  align-items: center;
+}
+
+.header .header-nav::-webkit-scrollbar,
+nav.header-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-item {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.nav-item:hover {
+  background-color: transparent;
+}
+
+.nav-link {
+  color: #00ffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+  background-color: transparent;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-link:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+  color: #00ffff;
+}
+
+.nav-link.active {
+  background-color: rgba(0, 255, 255, 0.2);
+  color: #00ffff;
+  border: 1px solid #00ffff;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.nav-link.active i {
+  color: #00ffff;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+.nav-link i {
+  font-size: 24px;
+}
+
+/* Clickable header title styling */
+.header-title-link {
+  text-decoration: none;
+  cursor: pointer !important;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.header-title-link:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.header-title-link:focus {
+  outline: 2px solid #00ffff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.header-title-link:active {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.header-title-link .header-title {
+  cursor: pointer !important;
+}
+
+.header-title-link .logo-text,
+.header-title-link .banner-text {
+  cursor: pointer !important;
+}
+
+.header-title-link .header-logo {
+  cursor: pointer !important;
+}
+
+@media (max-width: 1200px) {
+  .header-nav {
+    gap: 6px;
+  }
+  
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  
+  .nav-link span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-nav {
+    gap: 4px;
+  }
+  
+  .nav-link {
+    padding: 6px 8px;
+    font-size: 12px;
+    gap: 4px;
+  }
+  
+  .nav-link span {
+    font-size: 13px;
+  }
+  
+  .nav-link i {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header-logo {
+    height: 35px;
+  }
+  
+  .logo-text {
+    font-size: 18px;
+  }
+  
+  .banner-text {
+    font-size: 14px;
+  }
+
+  .header-nav {
+    gap: 3px;
+  }
+
+  .nav-item {
+    font-size: 12px;
+  }
+
+  .nav-link {
+    padding: 5px 6px;
+    gap: 3px;
+    font-size: 11px;
+  }
+
+  .nav-link span {
+    font-size: 12px;
+  }
+  
+  .nav-link i {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-logo,
+  .logo-text,
+  .banner-text {
+    display: none;
+  }
+  
+  .header-nav {
+    gap: 2px;
+    justify-content: center;
+    flex-wrap: nowrap !important;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .nav-link {
+    padding: 6px 4px;
+    gap: 2px;
+  }
+
+  .nav-link span {
+    font-size: 9px;
+  }
+  
+  .nav-link i {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 8px 0;
+  }
+
+  .header-content {
+    gap: 5px;
+    line-height: 35px;
+  }
+
+  .header-nav {
+    gap: 1px;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-link span {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 8px 4px;
+    min-width: 35px;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .nav-link i {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header-nav {
+    gap: 0px;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+  }
+
+  .nav-link {
+    padding: 6px 3px;
+    min-width: 32px;
+    flex-shrink: 0;
+  }
+  
+  .nav-link i {
+    font-size: 14px;
+  }
+}
+
+/* Global navigation fix - highest priority to override any page-specific conflicts */
+.header-nav.ms-auto {
+  flex-wrap: nowrap !important;
+}
+
+.header-nav .nav-item {
+  flex-shrink: 0 !important;
+}
+
+.header-nav .nav-link {
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+/* Force all pages to respect header navigation layout */
+body .header-nav {
+  flex-wrap: nowrap !important;
+}

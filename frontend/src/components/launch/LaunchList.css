@@ -1,0 +1,334 @@
+/* Custom styles to complement Bootstrap and maintain NASA theme */
+.table-dark {
+  --bs-table-bg: rgba(0, 0, 0, 0.9);
+  --bs-table-border-color: rgba(0, 255, 255, 0.3);
+  color: #00ffff;
+}
+
+.table-hover tbody tr:hover {
+  --bs-table-hover-bg: rgba(0, 255, 255, 0.1);
+  border-left: 3px solid #00ffff;
+  transform: translateX(2px);
+  transition: all 0.2s ease;
+}
+
+.table-info {
+  --bs-table-bg: rgba(0, 255, 255, 0.9);
+  --bs-table-border-color: #00ffff;
+}
+
+.text-info {
+  color: #00ffff !important;
+}
+
+.alert-info {
+  background-color: rgba(0, 255, 255, 0.1);
+  border-color: rgba(0, 255, 255, 0.3);
+  color: #00ffff;
+}
+
+.launches-table {
+  display: grid;
+  gap: 1px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 80px 150px 1fr 120px 150px 120px 100px 80px;
+  background: rgba(0, 0, 0, 0.95);
+  border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+  font-weight: bold;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 80px 150px 1fr 120px 150px 120px 100px 80px;
+  background: rgba(0, 0, 0, 0.9);
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.table-row:hover {
+  background: rgba(0, 0, 0, 0.95);
+  border-left: 3px solid #00ffff;
+  transform: translateX(2px);
+  transition: all 0.2s ease;
+}
+
+.header-cell,
+.cell {
+  padding: 10px 8px;
+  border-right: 1px solid rgba(0, 255, 255, 0.3);
+  word-break: break-word;
+  display: flex;
+  align-items: center;
+}
+
+.header-cell:last-child,
+.cell:last-child {
+  border-right: none;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status.upcoming {
+  background: rgba(255, 165, 0, 0.2);
+  color: #ffa500;
+  border: 1px solid #ffa500;
+}
+
+.status.success {
+  background: rgba(0, 255, 0, 0.2);
+  color: #00ff00;
+  border: 1px solid #00ff00;
+}
+
+.status.failed {
+  background: rgba(255, 0, 0, 0.2);
+  color: #ff0000;
+  border: 1px solid #ff0000;
+}
+
+.abort-button {
+  background: transparent;
+  border: 1px solid #ff4444;
+  color: #ff4444;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.abort-button:hover {
+  background: rgba(255, 68, 68, 0.1);
+}
+
+/* Remove action column when not showing abort */
+.launch-list:not(.show-abort) .table-header,
+.launch-list:not(.show-abort) .table-row {
+  grid-template-columns: 80px 150px 1fr 120px 150px 120px 100px;
+}
+
+/* Custom badge styling for space theme */
+.badge.bg-warning {
+  background-color: rgba(255, 165, 0, 0.9) !important;
+}
+
+.badge.bg-success {
+  background-color: rgba(0, 255, 0, 0.9) !important;
+}
+
+.badge.bg-danger {
+  background-color: rgba(255, 0, 0, 0.9) !important;
+}
+
+/* Custom button styling */
+.btn-outline-danger {
+  border-color: #ff4444;
+  color: #ff4444;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-danger:hover {
+  background-color: rgba(255, 68, 68, 0.1);
+  border-color: #ff4444;
+  color: #ff4444;
+}
+
+/* Responsive table enhancements */
+.table-responsive {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 255, 255, 0.1);
+}
+
+/* Custom scrollbar for table */
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 70px 130px 1fr 100px 130px 100px 90px 70px;
+    font-size: 13px;
+  }
+
+  .header-cell,
+  .cell {
+    padding: 8px 6px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 60px 120px 1fr 90px 110px 80px 80px 60px;
+    font-size: 12px;
+  }
+
+  .header-cell,
+  .cell {
+    padding: 8px 4px;
+  }
+}
+
+@media (max-width: 900px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 50px 100px 1fr 80px 100px 70px 70px 50px;
+    font-size: 11px;
+  }
+
+  .header-cell,
+  .cell {
+    padding: 6px 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .launches-table {
+    display: block;
+    background: transparent;
+    border: none;
+    gap: 0;
+  }
+
+  .table-header {
+    display: none;
+  }
+
+  .table-row {
+    display: block;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.95);
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+  }
+
+  .table-row:hover {
+    border-left: 3px solid #00ffff;
+    transform: none;
+    background: rgba(0, 0, 0, 0.98);
+  }
+
+  .cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+    font-size: 14px;
+  }
+
+  .cell:last-child {
+    border-bottom: none;
+  }
+
+  .cell::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: rgba(0, 255, 255, 0.8);
+    margin-right: 15px;
+    min-width: 100px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .launch-list {
+    padding: 15px;
+  }
+
+  .table-row {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .cell {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  .cell::before {
+    margin-bottom: 5px;
+    margin-right: 0;
+    min-width: auto;
+    font-size: 12px;
+  }
+
+  .status {
+    align-self: flex-start;
+    margin-top: 5px;
+  }
+
+  .abort-button {
+    align-self: flex-start;
+    margin-top: 5px;
+  }
+}
+
+/* Legacy CSS cleanup - keeping minimal custom styles */
+.launch-list {
+  padding: 20px;
+  color: #00ffff;
+}
+
+.launch-list h2 {
+  margin-bottom: 20px;
+  color: #00ffff;
+}
+
+.no-launches {
+  text-align: center;
+  color: #00ffff;
+  font-style: italic;
+  margin: 40px 0;
+}
+
+/* Additional cursor improvements for table interactions */
+.table tbody tr,
+.table-row,
+.launch-table-row {
+  cursor: pointer !important;
+}
+
+.table tbody tr:hover {
+  cursor: pointer !important;
+}
+
+/* Mission cards */
+.mission-card,
+.launch-card {
+  cursor: pointer !important;
+}
